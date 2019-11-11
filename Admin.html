@@ -1,0 +1,16 @@
+<html>
+<head>
+<script language="javascript">
+function verif()
+{if(f.log.value==""){alert("Veuillez entrer votre login!");return false;}
+if(f.mp.value==""){alert("Veuillez entrer votre mot de passe!");return false;}}
+
+
+</script></head>
+<body><table border=1 align=center><tr><td>
+<form name=f action="Verif.php" method=POST onsubmit="return verif()">
+<center><font size=6 color=#006699 face="monotype corsiva"><b><u>Authentification</u></b></font></center>
+<table><tr><td><b>Login:</b></td><td><input type=tsxt name=log ></td></tr>
+<tr><td><b>Mot de passe:</b></td><td><input type=tsxt name=mp ></td></tr></table><br>
+<center><input type=submit value=Valider>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type=reset value=Annuler></center>
+</td></tr></form></table></body></html> 

@@ -1,0 +1,38 @@
+<html>
+<body>
+<head>
+<script language="javascript">
+
+function verif()
+{
+if(f.cin.value==""){alert("Veuillez entrer votre num de CIN SVP!");return false;}
+if(f.cin.value.length!=8){alert("Numero de CIN incorrect!");return false;}
+if(f.nom.value==""){alert("Veuillez entrer votre nom SVP!");return false;}
+if(f.pren.value==""){alert("Veuillez entrer votre prénom SVP!");return false;}
+if(f.adr.value==""){alert("Veuillez entrer votre Adresse Mail SVP!");return false;}
+if(f.adr.value.indexOf('@')==-1){alert("Ce n'est pas une adresse e-mail juste!");return false;}
+if((f.choix1.checked==false)&&(f.choix2.checked==false)&&(f.choix3.checked==false))
+{alert("Choisissez au moins un module");return false;}}
+</script></head>
+<table border=1 width=470><tr><td>
+<h1 align=center><font color=#006699 face="monotype corsiva"><u><b><i>Inscription</b></font></h1>
+<form onsubmit="return verif()" method='POST' action="Inscription.php"  name=f>
+<table >
+<tr><td><font face="time new roman" size=1>Num_CIN*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td><input type=text name=cin size=30></td></tr>
+<tr><td><font face="time new roman" size=1>Nom*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td><input type=text name=nom size=30></td></tr>
+<tr><td><font face="time new roman" size=1>Prénom*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td><input type=text name=pren size=30></td></tr>
+<tr><td><font face="time new roman" size=1>Ville&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td><input type=text name=vil size=30></td></tr>
+<tr><td><font face="time new roman" size=1>Adresse E-mail*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td><td><input type=text name=adr size=30></td></tr>
+<tr><td></td><td><font face="time new roman" size=1>(*)Champs obligatoires</font></td></tr></table>
+<h4><font face="agency fb">Module de formation proposés:</font></h4>
+<table>
+<tr><td><input type=checkbox name=HTML >&nbsp;&nbsp;&nbsp;&nbsp;</td><td><font face="time new roman" size=1>Le langage HTML</td></tr>
+<tr><td><input type=checkbox name='Js' >&nbsp;&nbsp;&nbsp;&nbsp;</td><td><font face="time new roman" size=1>Le langage JavaScript</td></tr>
+<tr><td><input type=checkbox name='PHP' >&nbsp;&nbsp;&nbsp;&nbsp;</td><td><font face="time new roman" size=1>Le langage PHP</td></tr></table>
+<center><input type=submit value=Envoyer> <input type=reset value=Annuler></center>
+</tr></td></table>
+<br><ul><li><a href="Consult.PHP">Afficher votre Base de données</a></li><br>
+<li><a href="Supp.Php">Supprimer un client de votre Base de données</a></li><br>
+<li><a href="Maj.php">Modifier votre Base de données</a></li></ul><br>
+</form>
+</body></html>
